@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Meal
   attr_accessor :id
   attr_reader :name, :price

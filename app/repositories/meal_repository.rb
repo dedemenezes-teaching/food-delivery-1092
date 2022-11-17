@@ -1,5 +1,7 @@
-require "csv"
-require_relative "../models/meal"
+# frozen_string_literal: true
+
+require 'csv'
+require_relative '../models/meal'
 
 class MealRepository
   def initialize(csv_file)
@@ -36,8 +38,8 @@ class MealRepository
   end
 
   def save_csv
-    CSV.open(@csv_file, "wb") do |csv|
-      csv << ["id", "name", "price"]
+    CSV.open(@csv_file, 'wb') do |csv|
+      csv << %w[id name price]
       @meals.each do |meal|
         csv << [meal.id, meal.name, meal.price]
       end

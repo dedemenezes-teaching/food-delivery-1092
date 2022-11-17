@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CustomersView
   def ask_user_for(stuff)
     puts "#{stuff}?"

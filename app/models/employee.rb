@@ -1,14 +1,21 @@
+# frozen_string_literal: true
+
 class Employee
-  attr_reader :name, :password
+  attr_reader :username, :password, :role
+  attr_accessor :id
 
   def initialize(attributes = {})
     @id = attributes[:id]
-    @name = attributes[:name]
+    @username = attributes[:username]
     @password = attributes[:password]
     @role = attributes[:role]
   end
 
   def manager?
     @role == 'manager'
+  end
+
+  def rider?
+    @role == 'rider'
   end
 end

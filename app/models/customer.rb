@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Customer
   attr_accessor :id
   attr_reader :name, :address
